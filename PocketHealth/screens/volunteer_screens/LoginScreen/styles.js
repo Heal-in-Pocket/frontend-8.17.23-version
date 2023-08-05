@@ -1,4 +1,8 @@
 import { StyleSheet } from 'react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import scaleWidth from '../../../components/scaleWidth';
+import scaleHeight from '../../../components/scaleHeight';
+
 
 const styles = StyleSheet.create({
     container: {
@@ -14,7 +18,7 @@ const styles = StyleSheet.create({
     
     titleText: {
       alignItems: 'center',      
-      fontSize: 45,
+      fontSize: scaleHeight(45),
       fontWeight: 400  
     },
     error: {
@@ -23,20 +27,20 @@ const styles = StyleSheet.create({
     },   
 
     forgotPassword: {
-      fontSize: 15,
+      fontSize: scaleHeight(15),
       color: '#333232',      
       textDecorationLine: 'underline'
     },
     resend: {
-      fontSize: 15,
+      fontSize: scaleHeight(15),
       color: '#333232',      
       textDecorationLine: 'underline',
       textAlign: 'right'
     },
 
     button: {
-      height: 70,
-      width: '100%',
+      height: scaleHeight(70),
+      width: wp("80%"),
       marginVertical: 10,
       alignItems: 'center',
       justifyContent: 'center',
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
       color: '#fff',
-      fontSize: 22
+      fontSize: scaleHeight(22)
     },
 
   });

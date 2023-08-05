@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 import InputBoxWithLabel from '../../volunteer_screens/LoginScreen/components/InputBoxWithLabel';
 import styles from './styles';
@@ -44,7 +45,7 @@ export default function VolunteerLoginScreen({ navigation }) {
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
     
-      <View style={{marginTop: 75,marginBottom:80}}>
+      <View style={{marginTop: hp('10%'), marginBottom:hp('10%')}}>
         <Text style={styles.titleText}>Volunteer Login</Text>
       </View>
       
@@ -69,7 +70,7 @@ export default function VolunteerLoginScreen({ navigation }) {
         <Text style={styles.forgotPassword}>Forgot password?</Text>
       </TouchableOpacity>
 
-      <View style={{width:'100%',alignItems:'center',marginTop:30,marginBottom:40}}>
+      <View style={{width:'100%',alignItems:'center',marginTop:hp('4%'),marginBottom:hp('5%')}}>
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
